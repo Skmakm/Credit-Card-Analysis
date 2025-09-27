@@ -1,4 +1,4 @@
-Credit Card Analysis
+#Credit Card Analysis
 This repository contains a detailed analysis of credit card customer and transaction data. The goal is to identify key trends, segment customers, and derive actionable insights to inform business strategy. The final analysis is presented in a Power BI dashboard.
 
 Table of Contents
