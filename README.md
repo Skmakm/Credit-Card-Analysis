@@ -89,6 +89,7 @@ Data was imported and transformed using **Power Query in Power BI**.
 ### Calculated Fields (DAX)
 
 **Income Group**
+```arduino
 Income Group = 
 SWITCH(
     TRUE(),
@@ -97,8 +98,10 @@ SWITCH(
     'customer'[Income] >= 70000, "High",
     "unknown"
 )
+```
 
 **Age Group**
+```arduino
 Age_Group = 
 SWITCH(
     TRUE(),
@@ -109,16 +112,22 @@ SWITCH(
     'customer'[Customer_Age] >= 60, "60+",
     "unknown"
 )
+```
 
 **Week Num2**
+```arduino
 Week Num2 = WEEKNUM(credit_card[Week_Start_Date])
+```
 
 **Revenue**
+```arduino
 Revenue = 'credit_card'[Annual_Fees] + 
           'credit_card'[Total_Trans_Amt] + 
           'credit_card'[Interest_Earned]
+```
 
 **Current Week Revenue**
+```arduino
 Current_Week_Revenue = 
 CALCULATE(
     SUM('credit_card'[Revenue]),
@@ -127,8 +136,10 @@ CALCULATE(
         'credit_card'[Week_Num2] = MAX('credit_card'[Week_Num2])
     )
 )
+```
 
 **Previous Week Revenue**
+```arduino
 Previous_Week_Revenue = 
 CALCULATE(
     SUM('credit_card'[Revenue]),
@@ -137,6 +148,7 @@ CALCULATE(
         'credit_card'[Week_Num2] = MAX('credit_card'[Week_Num2]) - 1
     )
 )
+```
 
 ## Data Analysis
 The cleaned and merged dataset was used to build an **interactive Power BI dashboard**.  
