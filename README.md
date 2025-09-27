@@ -188,3 +188,7 @@ The cleaned and merged dataset was used to build an **interactive Power BI dashb
 - **Total Revenue:** $55.3M  
 - **Total Transaction Amount:** $44.5M  
 - **Total Interest Earned:** $7.8M  
+
+![Customer Report Preview](Customer-Report.jpg)
+
+![Transaction Report Preview](Transaction-Report.jpg)
